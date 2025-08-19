@@ -1,0 +1,15 @@
+import requests
+
+url = "https://api.kohls.com"
+
+payload = { "filter": { "novel_only": True } }
+headers = {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "X-RFToken": "gadfgjpoieewfijoijd6464gfgogfk"
+    "Uname": "tk00000"
+}
+
+response = requests.post(url, json=payload, headers=headers)
+
+print(response.text)
